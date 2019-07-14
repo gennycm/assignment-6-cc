@@ -1,0 +1,6 @@
+{
+  "GCLOUD_PROJECT": "assignment6-246621",
+  "OAUTH2_CLIENT_ID": "466098265621-4v00ipot7dfld82osbajoa0u8kfhstrb.apps.googleusercontent.com",
+  "OAUTH2_CLIENT_SECRET": "cuNph45hDlOpGutL1Ablz0zD",
+  "OAUTH2_CALLBACK": "http://localhost:8080/auth/google/callback"
+}

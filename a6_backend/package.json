@@ -1,37 +1,32 @@
 {
-  "name": "a-6-backend",
-  "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
-  "keywords": [],
-  "dependencies": {
-    "@sailshq/connect-redis": "^3.2.1",
-    "@sailshq/lodash": "^3.10.3",
-    "@sailshq/socket.io-redis": "^5.2.0",
-    "grunt": "1.0.1",
-    "sails": "^1.2.1",
-    "sails-hook-grunt": "^3.1.0",
-    "sails-hook-orm": "^2.1.1",
-    "sails-hook-sockets": "^1.5.5",
-    "sails-mysql": "^1.0.1"
-  },
-  "devDependencies": {
-    "@sailshq/eslint": "^4.19.3"
-  },
+  "name": "a6_backend",
+  "version": "1.0.0",
+  "description": "Web services for assignment6",
+  "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
-    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
-    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
-    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/a-6-backend.git"
+    "url": "git+https://github.com/gennycm/assignment-6-cc.git"
   },
-  "author": "anonymous node/sails user",
-  "license": "",
-  "engines": {
-    "node": "^10.15"
+  "keywords": [
+    "cloud",
+    "a6"
+  ],
+  "author": "Team 6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gennycm/assignment-6-cc/issues"
+  },
+  "homepage": "https://github.com/gennycm/assignment-6-cc#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5",
+    "mysql": "^2.17.1",
+    "req-flash": "0.0.3"
   }
 }

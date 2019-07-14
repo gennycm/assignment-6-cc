@@ -26,7 +26,7 @@ git config --global credential.helper gcloud.sh
 git clone https://source.developers.google.com/p/${PROJECTID}/r/${REPOSITORY} /opt/app
 
 # Install app dependencies
-cd /opt/app/7-gce
+cd /opt/app/a6_backend
 npm install sails -g
 npm install
 
@@ -37,7 +37,7 @@ chown -R nodeapp:nodeapp /opt/app
 # Configure supervisor to run the node app.
 cat >/etc/supervisor/conf.d/node-app.conf << EOF
 [program:nodeapp]
-directory=/opt/app/7-gce
+directory=/opt/app/a6_backend
 command=npm start
 autostart=true
 autorestart=true

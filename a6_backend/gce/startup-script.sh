@@ -26,8 +26,8 @@ git config --global credential.helper gcloud.sh
 git clone https://source.developers.google.com/p/${PROJECTID}/r/${REPOSITORY} /opt/app
 
 # Install app dependencies
-cd /opt/app/a6_backend
 npm install sails -g
+cd /opt/app/a6_backend
 npm install
 
 # Create a nodeapp user. The application will run as this user.

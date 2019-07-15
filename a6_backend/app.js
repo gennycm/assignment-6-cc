@@ -5,7 +5,7 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
-const {getEmployees, createEmployee} = require('./routes/index');
+const {getEmployees, createEmployee,sendSuccessStatus} = require('./routes/index');
 
 const port = 8080;
 

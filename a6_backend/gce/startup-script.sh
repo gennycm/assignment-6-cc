@@ -37,7 +37,7 @@ chown -R nodeapp:nodeapp /opt/app
 cat >/etc/supervisor/conf.d/node-app.conf << EOF
 [program:nodeapp]
 directory=/opt/app/a6_backend
-command=npm start
+command=node app.js
 autostart=true
 autorestart=true
 user=nodeapp

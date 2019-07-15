@@ -26,6 +26,9 @@ module.exports = {
             }
             res.send(result);
         });
+    },
+    sendSuccessStatus: (req, res) =>{
+        res.sendStatus(200)
     }
 
 

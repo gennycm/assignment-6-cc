@@ -35,7 +35,7 @@ app.use(bodyParser.json()); // parse form data client
 app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
 
 // routes for the app
-app.get('/', getEmployees);
+app.get('/', sendSuccessStatus);
 app.get('/api/employees', getEmployees);
 app.get('/api/employee/create', createEmployee);
 

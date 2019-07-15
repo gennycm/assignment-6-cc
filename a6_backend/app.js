@@ -1,8 +1,6 @@
 const express = require('express');
-const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-const path = require('path');
 const app = express();
 
 const {getEmployees, createEmployee,sendSuccessStatus} = require('./routes/index');
@@ -32,7 +30,6 @@ global.db = db;
 app.set('port', process.env.port || port); // set express to use this port
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json()); // parse form data client
-app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
 
 // routes for the app
 app.get('/', sendSuccessStatus);
@@ -43,6 +40,11 @@ app.get('/api/employee/create', createEmployee);
 // set the app to listen on the port
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
+}).on('error', function(err){
+    console.log('on error handler');
+    console.log(err);
 });
+
+
 
 module.exports = app;

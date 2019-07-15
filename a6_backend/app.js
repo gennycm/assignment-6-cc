@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 
+app.get('/_ah/health', (req, res) => {
+    res.status(200).send('ok');
+});
+
 app.get('/', function (req, res) {
     res.sendStatus(200);
 });

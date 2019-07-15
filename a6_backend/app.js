@@ -5,7 +5,7 @@ const app = express();
 
 const {getEmployees, createEmployee,sendSuccessStatus} = require('./routes/index');
 
-const port = 8080;
+const port = 80;
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.

@@ -15,13 +15,29 @@ app.get('/employees', function (req, res) {
 });
 
 app.get('/sum/:maxNum', function (req, res) {
+
+    //Source: https://tecadmin.net/get-current-date-time-javascript/
+    let TSwsStart = new Date();
+
     let maxNum = req.params.maxNum;
-    let total = 0;
+    let totalSum = 0;
 
     for (let i = 1; i <= maxNum; i++) {
-        total += i;
+        totalSum += i;
     }
-    res.json({'total': total});
+    let TSwsEnd = new Date();
+
+    let executionDelay = (TSwsEnd.getTime() - TSwsStart.getTime()) / 1000;
+
+    console.log('executionDelay', executionDelay);
+
+    let response = {
+        'totalSum': totalSum,
+        'TSwsStart': TSwsStart,
+        'TSwsEnd': TSwsEnd,
+        'executionDelay': executionDelay
+    };
+    res.json(response);
 });
 
 

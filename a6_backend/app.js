@@ -19,7 +19,7 @@ app.get('/sum', function (req, res) {
     //Source: https://tecadmin.net/get-current-date-time-javascript/
     let TSwsStart = new Date();
 
-    let maxNum = req.params.maxNum;
+    let maxNum = req.query.maxNum;
     let totalSum = 0;
 
     for (let i = 1; i <= maxNum; i++) {
